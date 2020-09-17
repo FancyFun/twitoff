@@ -23,15 +23,3 @@ class Tweet(DB.Model):
 
     def __repr__(self):
         return '-Tweet {}-'.format(self.text)
-    
-def insert_example_users():
-    nick = User(id=1, name='Nick')
-    elon = User(id=2, name='Elon')
-    DB.session.add(nick)
-    DB.session.add(elon)
-    DB.session.commit()
-
-def tweetTest():
-    tweet1 = Tweet(id=3, text="yayayaya", user_id=1)
-    DB.session.add(tweet1)
-    DB.session.commit()
